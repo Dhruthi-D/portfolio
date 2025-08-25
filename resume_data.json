@@ -1,0 +1,138 @@
+{
+  "personal": {
+    "name": "DHRUTHI D",
+    "title": "Information Science & Engineering Student",
+    "location": "Bengaluru, Karnataka 560037",
+    "phone": "+91 8749091263",
+    "email": "dhruthilakshmi.d@gmail.com",
+    "linkedin": "linkedin.com/in/dhruthi-d",
+    "github": "github.com/Dhruthi-D",
+    "photo": "/profile-photo.jpg",
+    "bio": "Passionate Information Science & Engineering student with a strong foundation in web development, IoT, and data science. Experienced in building full-stack applications and working with cutting-edge technologies."
+  },
+  "education": [
+    {
+      "institution": "R V College of Engineering",
+      "degree": "BE in Information Science and Engineering",
+      "cgpa": "9.69",
+      "period": "Aug 2023 – 2027",
+      "location": "Bengaluru, Karnataka",
+      "description": "Pursuing comprehensive studies in information science with focus on software development, data structures, and algorithms."
+    },
+    {
+      "institution": "Vagdevi Vilas School, Bengaluru",
+      "degree": "CBSE - 12 - PCMB",
+      "percentage": "96.4%",
+      "period": "June 2021 – March 2023",
+      "location": "Bengaluru, Karnataka",
+      "description": "Completed higher secondary education with distinction in Physics, Chemistry, Mathematics, and Biology."
+    }
+  ],
+  "skills": {
+    "languages": [
+      { "name": "Python", "level": 90 },
+      { "name": "C", "level": 85 },
+      { "name": "C++", "level": 80 },
+      { "name": "HTML/CSS", "level": 95 },
+      { "name": "Matlab", "level": 75 }
+    ],
+    "technologies": [
+      { "name": "Django", "level": 85 },
+      { "name": "Express.js", "level": 80 },
+      { "name": "Node.js", "level": 80 },
+      { "name": "Linux", "level": 85 },
+      { "name": "GitHub", "level": 90 }
+    ],
+    "databases": [
+      { "name": "Firebase Firestore", "level": 85 },
+      { "name": "SQLite", "level": 80 }
+    ],
+    "tools": [
+      { "name": "Arduino IDE", "level": 80 },
+      { "name": "Raspberry Pi", "level": 85 },
+      { "name": "ESP32", "level": 80 }
+    ]
+  },
+  "projects": [
+    {
+      "title": "DetoxDroid - Social Media Detox App",
+      "description": "A feature-rich platform with dashboard for posts and screen time tracking, integrated with Reddit API and sentiment analysis.",
+      "technologies": ["HTML/EJS", "CSS", "Express.js", "Reddit API", "Sentiment Analysis API", "Firebase", "Firestore"],
+      "period": "Feb 2025",
+      "github": "https://github.com/Dhruthi-D/detoxdroid",
+      "demo": "https://detoxdroid-demo.vercel.app",
+      "features": [
+        "Dashboard for posts and screen time tracking",
+        "Reddit API integration for Explore feature",
+        "Focus Mode for distraction-free productivity",
+        "Mood board with sentiment-based insights",
+        "Real-time updates with Firebase Firestore",
+        "User authentication using Firebase"
+      ]
+    },
+    {
+      "title": "Water Monitoring System",
+      "description": "IoT-based water monitoring system leveraging Raspberry Pi and sensors to optimize water usage and mitigate wastage.",
+      "technologies": ["Raspberry Pi", "Water Flow Sensor", "Python", "Django", "Twilio", "Smtplib", "ThingSpeak"],
+      "period": "Dec 2024",
+      "github": "https://github.com/Dhruthi-D/water-monitoring",
+      "demo": "https://water-monitoring-demo.vercel.app",
+      "features": [
+        "Real-time water flow monitoring",
+        "Instant alerts via Twilio API",
+        "Python-based visualization tools",
+        "ThingSpeak integration for data tracking",
+        "Abnormal usage detection and notifications"
+      ]
+    },
+    {
+      "title": "Plant Guardian",
+      "description": "Smart indoor plant monitoring system using ESP32 and various sensors for real-time environmental tracking and plant care recommendations.",
+      "technologies": ["Python", "Arduino IDE", "ESP32", "Flask", "NPK Sensor", "DHT Sensor", "Soil Moisture Sensor"],
+      "period": "June 2025",
+      "github": "https://github.com/Dhruthi-D/plant-guardian",
+      "demo": "https://plant-guardian-demo.vercel.app",
+      "features": [
+        "Real-time environmental monitoring",
+        "Flask-based web dashboard",
+        "Serial communication for sensor data",
+        "Plant care recommendations",
+        "Dynamic UI updates based on sensor readings"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Member",
+      "organization": "Frequency",
+      "period": "Jun 2018 – Present",
+      "location": "RVCE",
+      "description": "Collaborated on projects integrating software development with electronic control systems, bridging coding and hardware for real-world applications."
+    },
+    {
+      "role": "Member",
+      "organization": "Accelerate",
+      "period": "Jan 2023 – Present",
+      "location": "RVCE",
+      "description": "Participated in events pertaining to brainstorming and projects on web development."
+    },
+    {
+      "role": "Volunteer",
+      "organization": "National Service Scheme",
+      "period": "Jan 2023 – Present",
+      "location": "RVCE",
+      "description": "Actively participated in community service activities, blood donation camps, cleanliness drives, and awareness programs."
+    }
+  ],
+  "achievements": [
+    "CGPA: 9.69/10 in Information Science & Engineering",
+    "96.4% in CBSE 12th Standard (PCMB)",
+    "Successfully completed multiple IoT and web development projects",
+    "Active participation in technical clubs and community service"
+  ],
+  "social": {
+    "github": "https://github.com/Dhruthi-D",
+    "linkedin": "https://linkedin.com/in/dhruthi-d",
+    "email": "dhruthilakshmi.d@gmail.com"
+  }
+}
