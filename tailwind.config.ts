@@ -9,6 +9,10 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        serif: ["var(--font-lora)", "Georgia", "serif"],
+        headline: ["var(--font-playfair)", "Georgia", "serif"],
+      },
       colors: {
         primary: {
           50: '#eff6ff',

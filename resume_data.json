@@ -4,7 +4,7 @@
     "title": "Information Science & Engineering Student",
     "location": "Bengaluru, Karnataka 560037",
     "phone": "+91 8749091263",
-    "email": "dhruthilakshmi.d@gmail.com",
+    "email": "dhruthi1536@gmail.com",
     "linkedin": "linkedin.com/in/dhruthi-d",
     "github": "github.com/Dhruthi-D",
     "photo": "/profile-photo.jpg",
@@ -14,7 +14,7 @@
     {
       "institution": "R V College of Engineering",
       "degree": "BE in Information Science and Engineering",
-      "cgpa": "9.69",
+      "cgpa": "9.64",
       "period": "Aug 2023 – 2027",
       "location": "Bengaluru, Karnataka",
       "description": "Pursuing comprehensive studies in information science with focus on software development, data structures, and algorithms."
@@ -28,76 +28,71 @@
       "description": "Completed higher secondary education with distinction in Physics, Chemistry, Mathematics, and Biology."
     }
   ],
+  "relevantCoursework": [
+    "Data Structures",
+    "Algorithms Analysis",
+    "Operating Systems",
+    "Database Management Systems",
+    "AIML",
+    "Computer Networks"
+  ],
   "skills": {
     "languages": [
       { "name": "Python", "level": 90 },
       { "name": "C", "level": 85 },
       { "name": "C++", "level": 80 },
       { "name": "HTML/CSS", "level": 95 },
-      { "name": "Matlab", "level": 75 }
+      { "name": "Matlab", "level": 75 },
+      { "name": "JavaScript", "level": 85 }
     ],
-    "technologies": [
+    "backend": [
       { "name": "Django", "level": 85 },
       { "name": "Express.js", "level": 80 },
-      { "name": "Node.js", "level": 80 },
-      { "name": "Linux", "level": 85 },
+      { "name": "Node.js", "level": 80 }
+    ],
+    "frameworks": [
+      { "name": "Linux", "level": 80 },
       { "name": "GitHub", "level": 90 }
-    ],
-    "databases": [
-      { "name": "Firebase Firestore", "level": 85 },
-      { "name": "SQLite", "level": 80 }
-    ],
-    "tools": [
-      { "name": "Arduino IDE", "level": 80 },
-      { "name": "Raspberry Pi", "level": 85 },
-      { "name": "ESP32", "level": 80 }
     ]
   },
   "projects": [
     {
-      "title": "DetoxDroid - Social Media Detox App",
-      "description": "A feature-rich platform with dashboard for posts and screen time tracking, integrated with Reddit API and sentiment analysis.",
-      "technologies": ["HTML/EJS", "CSS", "Express.js", "Reddit API", "Sentiment Analysis API", "Firebase", "Firestore"],
-      "period": "Feb 2025",
-      "github": "https://github.com/Dhruthi-D/detoxdroid",
-      "demo": "https://detoxdroid-demo.vercel.app",
+      "title": "EduMate KCET-Personalized Rank-to-College Advisor",
+      "description": "Developed KCET EduGuide, a full-stack counselling platform used by 70+ students, that helps students to prepare KCET counselling choice lists through personalized rank-based recommendations and automated choice management.",
+      "technologies": ["Node.js", "Express.js", "React", "EC2", "S3", "Vercel", "TypeScript", "Tailwind CSS", "Recharts", "MongoDB"],
+      "period": "April 2026",
+      "github": "https://github.com/Dhruthi-D/EduMate-KCET",
+      "demo": "",
       "features": [
-        "Dashboard for posts and screen time tracking",
-        "Reddit API integration for Explore feature",
-        "Focus Mode for distraction-free productivity",
-        "Mood board with sentiment-based insights",
-        "Real-time updates with Firebase Firestore",
-        "User authentication using Firebase"
+        "Built responsive frontend with React, TypeScript, Tailwind CSS, cutoff visualizations using Recharts, PDF choice list generation, and JWT-based authentication",
+        "Developed Node.js and Express backend with MongoDB, recommendation algorithms, mentor verification, meeting management, and RESTful APIs",
+        "Deployed using Amazon EC2 for the backend, Vercel for the frontend, and Amazon S3 for hosting images and branch insight JSON files"
       ]
     },
     {
-      "title": "Water Monitoring System",
-      "description": "IoT-based water monitoring system leveraging Raspberry Pi and sensors to optimize water usage and mitigate wastage.",
-      "technologies": ["Raspberry Pi", "Water Flow Sensor", "Python", "Django", "Twilio", "Smtplib", "ThingSpeak"],
-      "period": "Dec 2024",
-      "github": "https://github.com/Dhruthi-D/water-monitoring",
-      "demo": "https://water-monitoring-demo.vercel.app",
+      "title": "Urban Sustainability AI",
+      "description": "Developed an AI-powered urban sustainability web platform for Bangalore that integrates geospatial raster data and OpenStreetMap vectors to generate location-based sustainability scores with interactive map visualization.",
+      "technologies": ["Flask", "LightGBM", "GeoPandas", "Rasterio", "Leaflet", "Google Gemini API"],
+      "period": "Jan 2026",
+      "github": "https://github.com/Dhruthi-D/Urban-Sustainability-AI",
+      "demo": "",
       "features": [
-        "Real-time water flow monitoring",
-        "Instant alerts via Twilio API",
-        "Python-based visualization tools",
-        "ThingSpeak integration for data tracking",
-        "Abnormal usage detection and notifications"
+        "Geospatial raster data and OpenStreetMap vector integration for location-based sustainability scores with Leaflet map visualization",
+        "LightGBM models to predict environmental impact of proposed urban projects, enabling before-after comparison and data-driven insights",
+        "Integrated Google Gemini AI for explainable sustainability insights and explanation of environmental impacts"
       ]
     },
     {
-      "title": "Plant Guardian",
-      "description": "Smart indoor plant monitoring system using ESP32 and various sensors for real-time environmental tracking and plant care recommendations.",
-      "technologies": ["Python", "Arduino IDE", "ESP32", "Flask", "NPK Sensor", "DHT Sensor", "Soil Moisture Sensor"],
-      "period": "June 2025",
-      "github": "https://github.com/Dhruthi-D/plant-guardian",
-      "demo": "https://plant-guardian-demo.vercel.app",
+      "title": "Web-Based Club Management System",
+      "description": "Built a web-based club management system using MySQL + MongoDB, supporting role-based access, secure authentication, and concurrent users.",
+      "technologies": ["Node.js", "Express.js", "MySQL", "MongoDB", "NLP"],
+      "period": "Jan 2026",
+      "github": "https://github.com/Dhruthi-D/Club-Management-System",
+      "demo": "",
       "features": [
-        "Real-time environmental monitoring",
-        "Flask-based web dashboard",
-        "Serial communication for sensor data",
-        "Plant care recommendations",
-        "Dynamic UI updates based on sensor readings"
+        "Supports role-based access control, secure authentication, and concurrent user management",
+        "Analytics dashboards for event performance, budget utilization, and participation trends using complex SQL joins and database aggregations",
+        "Integrated NLP-based feedback analysis with insights and rating trends to support data-driven decision making"
       ]
     }
   ],
@@ -105,9 +100,9 @@
     {
       "role": "Member",
       "organization": "Frequency",
-      "period": "Jun 2018 – Present",
+      "period": "Jun 2023 – Present",
       "location": "RVCE",
-      "description": "Collaborated on projects integrating software development with electronic control systems, bridging coding and hardware for real-world applications."
+      "description": "Collaborated on project integrating software development with electronic control systems for real-world applications."
     },
     {
       "role": "Member",
@@ -121,18 +116,24 @@
       "organization": "National Service Scheme",
       "period": "Jan 2023 – Present",
       "location": "RVCE",
-      "description": "Actively participated in community service activities, blood donation camps, cleanliness drives, and awareness programs."
+      "description": "Volunteer at RVCE National Service Scheme (NSS)."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Cisco CCNA1: Introduction to Networks",
+      "description": "Certification covering networking fundamentals, IP addressing, and device configuration using Cisco Packet Tracer."
     }
   ],
   "achievements": [
-    "CGPA: 9.69/10 in Information Science & Engineering",
+    "CGPA: 9.64/10 in Information Science & Engineering",
     "96.4% in CBSE 12th Standard (PCMB)",
-    "Successfully completed multiple IoT and web development projects",
-    "Active participation in technical clubs and community service"
+    "Cisco CCNA1: Introduction to Networks certification",
+    "Active participation in technical clubs (Frequency, Accelerate) and NSS"
   ],
   "social": {
     "github": "https://github.com/Dhruthi-D",
     "linkedin": "https://linkedin.com/in/dhruthi-d",
-    "email": "dhruthilakshmi.d@gmail.com"
+    "email": "dhruthi1536@gmail.com"
   }
 }

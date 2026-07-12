@@ -8,34 +8,82 @@
   }
   
   body {
-    @apply text-gray-100;
+    @apply text-[#1c1917] dark:text-[#eae6df] font-serif bg-[#f4f0ea] dark:bg-[#181614];
   }
 }
 
 @layer components {
+  /* Vintage newspaper button */
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    @apply bg-transparent hover:bg-[#1c1917] dark:hover:bg-[#eae6df] hover:text-[#f4f0ea] dark:hover:text-[#181614] text-[#1c1917] dark:text-[#eae6df] font-headline font-bold py-2 px-5 border-2 border-black dark:border-[#eae6df] transition-all duration-200 tracking-wider uppercase text-xs rounded-none;
   }
   
   .btn-secondary {
-    @apply bg-gray-700 hover:bg-gray-600 text-gray-100 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    @apply bg-transparent hover:bg-black/5 dark:hover:bg-white/5 text-[#1c1917] dark:text-[#eae6df] font-headline font-medium py-2 px-5 border border-black/60 dark:border-[#eae6df]/60 transition-colors duration-200 tracking-wider uppercase text-xs rounded-none;
   }
   
+  /* Newspaper article columns / blocks */
   .card {
-    @apply bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700;
+    @apply bg-transparent p-6 border border-black/30 dark:border-white/20 rounded-none relative;
   }
   
+  /* Bold column title */
   .section-title {
-    @apply text-3xl font-bold text-white mb-8 text-center;
+    @apply text-3xl md:text-4xl font-extrabold font-headline text-[#1c1917] dark:text-white mb-10 text-center tracking-tight uppercase relative py-2 border-y border-black dark:border-white/40;
   }
   
+  /* Replaces gradient texts with bold editorial black font */
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent;
+    @apply font-headline text-black dark:text-white font-extrabold underline decoration-1 underline-offset-4;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Newspaper drop caps */
+  .drop-cap::first-letter {
+    font-family: var(--font-playfair), Georgia, serif;
+    font-size: 3.8rem;
+    font-weight: 900;
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.6rem;
+    margin-top: 0.15rem;
+    color: currentColor;
+  }
+
+  /* Newspaper thick/thin rules */
+  .border-double-newspaper {
+    border-top: 5px double currentColor;
+    border-bottom: 5px double currentColor;
+  }
+
+  .border-double-top {
+    border-top: 5px double currentColor;
+  }
+
+  .border-double-bottom {
+    border-bottom: 5px double currentColor;
+  }
+
+  /* Grayscale newsprint photo effect */
+  .vintage-photo {
+    filter: grayscale(100%) contrast(115%) brightness(95%);
+    border: 1px solid currentColor;
+    padding: 6px;
+    background-color: transparent;
+    transition: filter 0.3s ease;
+  }
+
+  .vintage-photo:hover {
+    filter: grayscale(0%) contrast(100%) brightness(100%);
+  }
+
+  /* Vertical news separators */
+  .news-col-divider {
+    @apply border-r border-black/20 dark:border-white/10 pr-6 mr-6;
   }
 }

@@ -1,98 +1,57 @@
 import Link from 'next/link';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import resumeData from '../../resume_data.json';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-800 border-t border-gray-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand Section */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-primary-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">DD</span>
-              </div>
-              <span className="text-xl font-bold text-white">DHRUTHI D</span>
-            </div>
-            <p className="text-gray-400 text-sm">
-              Information Science & Engineering Student passionate about web development and IoT technologies.
+    <footer className="mt-20 border-t-4 border-double border-black dark:border-white/40 bg-transparent py-10 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-black/20 dark:border-white/10">
+          {/* Masthead Info */}
+          <div className="space-y-3">
+            <h3 className="font-headline font-black text-xl tracking-wider uppercase">DHRUTHI D</h3>
+            <p className="text-xs text-[#1c1917]/70 dark:text-[#eae6df]/70 uppercase tracking-widest leading-relaxed">
+              ESTABLISHED 2023 • BENGALURU, KARNATAKA • INFORMATION SCIENCE & ENGINEERING
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-200">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects" className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-200">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link href="/resume" className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-200">
-                  Resume
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-primary-400 text-sm transition-colors duration-200">
-                  Contact
-                </Link>
-              </li>
-            </ul>
+          {/* Directory Column */}
+          <div className="space-y-3">
+            <h4 className="font-headline font-bold text-xs uppercase tracking-wider">Index of Sections</h4>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs font-semibold">
+              <Link href="/about" className="hover:underline">[ ABOUT ME ]</Link>
+              <Link href="/projects" className="hover:underline">[ WORK & PROJECTS ]</Link>
+              <Link href="/resume" className="hover:underline">[ EXPERIENCE & GAZETTE ]</Link>
+              <Link href="/contact" className="hover:underline">[ WRITE TO EDITOR ]</Link>
+            </div>
           </div>
 
-          {/* Social Links */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Connect</h3>
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/Dhruthi-D"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-                aria-label="GitHub"
-              >
-                <Github className="w-6 h-6" />
+          {/* Social Directory */}
+          <div className="space-y-3">
+            <h4 className="font-headline font-bold text-xs uppercase tracking-wider">Correspondence & Inquiries</h4>
+            <div className="flex flex-col gap-y-1 text-xs font-semibold">
+              <a href={resumeData.social.github} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                [ GITHUB ]
               </a>
-              <a
-                href="https://linkedin.com/in/dhruthi-d"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-600 transition-colors duration-200"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-6 h-6" />
+              <a href={resumeData.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                [ LINKEDIN ]
               </a>
-              <a
-                href="mailto:dhruthilakshmi.d@gmail.com"
-                className="text-gray-400 hover:text-red-600 transition-colors duration-200"
-                aria-label="Email"
-              >
-                <Mail className="w-6 h-6" />
+              <a href={`mailto:${resumeData.social.email}`} className="hover:underline">
+                [ EMAIL: {resumeData.social.email.toUpperCase()} ]
               </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="mt-8 pt-8 border-t border-gray-700">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} DHRUTHI D. All rights reserved.
-            </p>
-            <p className="text-gray-400 text-sm flex items-center space-x-1">
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500" />
-              <span>using Next.js & Tailwind CSS</span>
-            </p>
-          </div>
+        {/* Masthead base imprint */}
+        <div className="pt-8 text-center md:flex md:justify-between md:items-center text-xs uppercase tracking-widest text-[#1c1917]/60 dark:text-[#eae6df]/60 font-medium">
+          <p>© {currentYear} DHRUTHI D. ALL RIGHTS PRINTED ON DIGITAL PAPER.</p>
+          <p className="flex items-center justify-center space-x-1 mt-2 md:mt-0">
+            <span>TYPESET WITH NEXT.JS & TAILWIND CSS</span>
+            <Heart className="w-3.5 h-3.5 text-black dark:text-white fill-current" />
+          </p>
         </div>
       </div>
     </footer>

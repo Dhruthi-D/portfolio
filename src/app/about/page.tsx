@@ -2,180 +2,147 @@ import resumeData from '../../../resume_data.json';
 
 export default function About() {
   return (
-    <div className="min-h-screen py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="section-title">About Me</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            {resumeData.personal.bio}
-          </p>
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      {/* Header section styled like a editorial header */}
+      <div className="text-center mb-12">
+        <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#1c1917]/60 dark:text-[#eae6df]/60 font-headline">Section II • Editorial Profile</span>
+        <h1 className="text-4xl md:text-5xl font-black font-headline text-black dark:text-white uppercase mt-1 pb-4 border-b border-black dark:border-white/20">
+          EDITORIAL: MEET DHRUTHI D.
+        </h1>
+        <p className="text-sm md:text-base font-serif italic text-[#1c1917]/70 dark:text-[#eae6df]/70 max-w-2xl mx-auto mt-4 leading-relaxed">
+          "A retrospective on academic excellence at R V College of Engineering and building systems that bridge the physical and virtual worlds."
+        </p>
+      </div>
+
+      {/* Main Column Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        {/* Left Side: Bio Editorial */}
+        <div className="md:col-span-8 space-y-6">
+          <section className="pb-6 border-b border-black/20 dark:border-white/10">
+            <h2 className="font-headline font-black text-xl text-black dark:text-white uppercase mb-4">
+              Academic & Professional Chronicle
+            </h2>
+            <p className="text-sm leading-relaxed drop-cap text-[#1c1917]/90 dark:text-[#eae6df]/90 text-justify">
+              {resumeData.personal.bio}
+            </p>
+          </section>
+
+          {/* Education timeline */}
+          <section className="pb-6 border-b border-black/20 dark:border-white/10">
+            <h2 className="font-headline font-black text-xl text-black dark:text-white uppercase mb-6">
+              Official Institutions & Record
+            </h2>
+            <div className="space-y-6">
+              {resumeData.education.map((edu, index) => (
+                <div key={index} className="pl-4 border-l-2 border-black dark:border-white/30 space-y-1">
+                  <div className="flex justify-between items-start">
+                    <h3 className="font-headline font-bold text-base text-black dark:text-white uppercase">
+                      {edu.institution}
+                    </h3>
+                    <span className="font-bold text-sm">{edu.cgpa || edu.percentage}</span>
+                  </div>
+                  <p className="text-xs font-semibold text-[#1c1917]/80 dark:text-[#eae6df]/80 uppercase tracking-wide">
+                    {edu.degree}
+                  </p>
+                  <p className="text-xs text-[#1c1917]/60 dark:text-[#eae6df]/60 font-medium">
+                    {edu.location} • {edu.period}
+                  </p>
+                  <p className="text-xs text-[#1c1917]/80 dark:text-[#eae6df]/80 mt-1 italic text-justify leading-relaxed">
+                    {edu.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Relevant Coursework */}
+          {resumeData.relevantCoursework && (
+            <section className="pb-6">
+              <h2 className="font-headline font-black text-xl text-black dark:text-white uppercase mb-4">
+                Syllabus & Curriculum
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {resumeData.relevantCoursework.map((course, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1.5 border border-black/30 dark:border-white/20 text-xs font-bold font-headline uppercase tracking-wider text-black dark:text-white"
+                  >
+                    {course}
+                  </span>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
 
-        {/* Bio Section */}
-        <section className="mb-16">
-          <div className="card">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Personal Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <span className="font-medium text-gray-700 dark:text-gray-300">Name:</span>
-                  <span className="text-gray-900 dark:text-white">{resumeData.personal.name}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="font-medium text-gray-700 dark:text-gray-300">Title:</span>
-                  <span className="text-gray-900 dark:text-white">{resumeData.personal.title}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="font-medium text-gray-700 dark:text-gray-300">Location:</span>
-                  <span className="text-gray-900 dark:text-white">{resumeData.personal.location}</span>
-                </div>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <span className="font-medium text-gray-700 dark:text-gray-300">Email:</span>
-                  <span className="text-gray-900 dark:text-white">{resumeData.personal.email}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="font-medium text-gray-700 dark:text-gray-300">Phone:</span>
-                  <span className="text-gray-900 dark:text-white">{resumeData.personal.phone}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="font-medium text-gray-700 dark:text-gray-300">CGPA:</span>
-                  <span className="text-gray-900 dark:text-white">{resumeData.education[0].cgpa}/10</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Skills Section */}
-        <section className="mb-16">
-          <h2 className="section-title">Skills & Technologies</h2>
-          
-          {/* Programming Languages */}
-          <div className="card mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Programming Languages</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {resumeData.skills.languages.map((skill, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium text-gray-900 dark:text-white">{skill.name}</span>
-                    <span className="text-sm text-gray-600 dark:text-gray-400">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                    <div
-                      className="bg-gradient-to-r from-primary-500 to-purple-500 h-3 rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
+        {/* Right Side: Skills & Key achievements */}
+        <div className="md:col-span-4 space-y-6 md:border-l md:border-black/20 md:dark:border-white/10 md:pl-6">
+          {/* Key Achievements Box */}
+          <div className="border-2 border-black dark:border-white/40 p-4">
+            <h3 className="font-headline font-black text-sm text-center uppercase tracking-wider mb-4 border-b border-black dark:border-white/20 pb-1 text-black dark:text-white">
+              FEATS & ANNOUNCEMENTS
+            </h3>
+            <ul className="space-y-4">
+              {resumeData.achievements.map((achievement, index) => (
+                <li key={index} className="text-xs leading-relaxed text-[#1c1917]/90 dark:text-[#eae6df]/90 list-disc list-inside">
+                  {achievement}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          {/* Technologies */}
-          <div className="card mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Technologies & Frameworks</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {resumeData.skills.technologies.map((skill, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium text-gray-900 dark:text-white">{skill.name}</span>
-                    <span className="text-sm text-gray-600 dark:text-gray-400">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                    <div
-                      className="bg-gradient-to-r from-green-500 to-blue-500 h-3 rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Technical Capabilities list */}
+          <div className="space-y-4">
+            <h3 className="font-headline font-black text-sm uppercase tracking-wider text-black dark:text-white border-b border-black dark:border-white/20 pb-1">
+              RECORDED SKILLS
+            </h3>
 
-          {/* Databases */}
-          <div className="card mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Databases & Tools</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {resumeData.skills.databases.map((skill, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium text-gray-900 dark:text-white">{skill.name}</span>
-                    <span className="text-sm text-gray-600 dark:text-gray-400">{skill.level}%</span>
+            {/* Languages */}
+            <div className="space-y-2">
+              <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-black dark:text-white">
+                Programming Languages
+              </h4>
+              <div className="space-y-1 text-xs font-serif">
+                {resumeData.skills.languages.map((skill, index) => (
+                  <div key={index} className="flex justify-between items-center py-1 border-b border-black/10 dark:border-white/5">
+                    <span>{skill.name}</span>
+                    <span className="font-bold text-[#1c1917]/70 dark:text-[#eae6df]/70">{skill.level}%</span>
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                    <div
-                      className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Hardware Tools */}
-          <div className="card">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Hardware & Development Tools</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {resumeData.skills.tools.map((skill, index) => (
-                <div key={index} className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium text-gray-900 dark:text-white">{skill.name}</span>
-                    <span className="text-sm text-gray-600 dark:text-gray-400">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                    <div
-                      className="bg-gradient-to-r from-yellow-500 to-orange-500 h-3 rounded-full transition-all duration-1000 ease-out"
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Education Preview */}
-        <section className="mb-16">
-          <h2 className="section-title">Education</h2>
-          <div className="space-y-6">
-            {resumeData.education.map((edu, index) => (
-              <div key={index} className="card">
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{edu.institution}</h3>
-                    <p className="text-gray-600 dark:text-gray-400">{edu.degree}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-500">{edu.location}</p>
-                  </div>
-                  <div className="text-right mt-4 md:mt-0">
-                    <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">
-                      {edu.cgpa || edu.percentage}
-                    </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-500">{edu.period}</p>
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </section>
+            </div>
 
-        {/* Achievements */}
-        <section>
-          <h2 className="section-title">Key Achievements</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {resumeData.achievements.map((achievement, index) => (
-              <div key={index} className="card">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-700 dark:text-gray-300">{achievement}</p>
-                </div>
+            {/* Backend */}
+            <div className="space-y-2 pt-2">
+              <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-black dark:text-white">
+                Backend Technologies
+              </h4>
+              <div className="space-y-1 text-xs font-serif">
+                {resumeData.skills.backend.map((skill, index) => (
+                  <div key={index} className="flex justify-between items-center py-1 border-b border-black/10 dark:border-white/5">
+                    <span>{skill.name}</span>
+                    <span className="font-bold text-[#1c1917]/70 dark:text-[#eae6df]/70">{skill.level}%</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            {/* Frameworks */}
+            <div className="space-y-2 pt-2">
+              <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-black dark:text-white">
+                Environments & Frameworks
+              </h4>
+              <div className="space-y-1 text-xs font-serif">
+                {resumeData.skills.frameworks.map((skill, index) => (
+                  <div key={index} className="flex justify-between items-center py-1 border-b border-black/10 dark:border-white/5">
+                    <span>{skill.name}</span>
+                    <span className="font-bold text-[#1c1917]/70 dark:text-[#eae6df]/70">{skill.level}%</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
