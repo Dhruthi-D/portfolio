@@ -103,9 +103,21 @@ export default function Home() {
               <p className="text-xs text-justify font-serif text-[#1c1917]/85 dark:text-[#eae6df]/85 leading-relaxed">
                 A full-stack Node.js, Express, and React platform was launched to help KCET counselling candidates prepare rank-based recommendations and automated choices. Developed with interactive visualizations and secure JWT verification.
               </p>
-              <Link href="/projects" className="inline-block text-xs font-bold font-headline underline hover:text-primary-600">
-                READ MORE ABOUT EDUMATE →
-              </Link>
+              <div className="flex flex-wrap gap-4 pt-2">
+                <Link href="/projects" className="text-xs font-bold font-headline underline hover:text-primary-600">
+                  READ MORE ABOUT EDUMATE →
+                </Link>
+                {resumeData.projects[0].demo && (
+                  <a
+                    href={resumeData.projects[0].demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-bold font-headline underline text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300"
+                  >
+                    LIVE DEMO ↗
+                  </a>
+                )}
+              </div>
             </div>
 
             {/* Article 2: Urban Sustainability */}

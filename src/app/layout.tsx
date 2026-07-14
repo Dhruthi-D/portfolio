@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
+import NewspaperTransition from "@/components/NewspaperTransition";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -39,7 +40,7 @@ export default function RootLayout({
           <div className="min-h-screen bg-[#f4f0ea] dark:bg-[#181614] text-[#1c1917] dark:text-[#eae6df] transition-colors duration-300">
             <Navigation />
             <main className="pt-20 pb-16">
-              {children}
+              <NewspaperTransition>{children}</NewspaperTransition>
             </main>
             <Footer />
           </div>

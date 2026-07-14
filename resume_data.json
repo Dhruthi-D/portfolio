@@ -38,31 +38,75 @@
   ],
   "skills": {
     "languages": [
-      { "name": "Python", "level": 90 },
-      { "name": "C", "level": 85 },
-      { "name": "C++", "level": 80 },
-      { "name": "HTML/CSS", "level": 95 },
-      { "name": "Matlab", "level": 75 },
-      { "name": "JavaScript", "level": 85 }
+      {
+        "name": "Python",
+        "level": 90
+      },
+      {
+        "name": "C",
+        "level": 85
+      },
+      {
+        "name": "C++",
+        "level": 80
+      },
+      {
+        "name": "HTML/CSS",
+        "level": 95
+      },
+      {
+        "name": "Matlab",
+        "level": 75
+      },
+      {
+        "name": "JavaScript",
+        "level": 85
+      }
     ],
     "backend": [
-      { "name": "Django", "level": 85 },
-      { "name": "Express.js", "level": 80 },
-      { "name": "Node.js", "level": 80 }
+      {
+        "name": "Django",
+        "level": 85
+      },
+      {
+        "name": "Express.js",
+        "level": 80
+      },
+      {
+        "name": "Node.js",
+        "level": 80
+      }
     ],
     "frameworks": [
-      { "name": "Linux", "level": 80 },
-      { "name": "GitHub", "level": 90 }
+      {
+        "name": "Linux",
+        "level": 80
+      },
+      {
+        "name": "GitHub",
+        "level": 90
+      }
     ]
   },
   "projects": [
     {
       "title": "EduMate KCET-Personalized Rank-to-College Advisor",
       "description": "Developed KCET EduGuide, a full-stack counselling platform used by 70+ students, that helps students to prepare KCET counselling choice lists through personalized rank-based recommendations and automated choice management.",
-      "technologies": ["Node.js", "Express.js", "React", "EC2", "S3", "Vercel", "TypeScript", "Tailwind CSS", "Recharts", "MongoDB"],
+      "technologies": [
+        "Node.js",
+        "Express.js",
+        "React",
+        "EC2",
+        "S3",
+        "Vercel",
+        "TypeScript",
+        "Tailwind CSS",
+        "Recharts",
+        "MongoDB"
+      ],
       "period": "April 2026",
       "github": "https://github.com/Dhruthi-D/EduMate-KCET",
-      "demo": "",
+      "demo": "https://kcet-eduguide.vercel.app",
       "features": [
         "Built responsive frontend with React, TypeScript, Tailwind CSS, cutoff visualizations using Recharts, PDF choice list generation, and JWT-based authentication",
         "Developed Node.js and Express backend with MongoDB, recommendation algorithms, mentor verification, meeting management, and RESTful APIs",
@@ -72,9 +116,16 @@
     {
       "title": "Urban Sustainability AI",
       "description": "Developed an AI-powered urban sustainability web platform for Bangalore that integrates geospatial raster data and OpenStreetMap vectors to generate location-based sustainability scores with interactive map visualization.",
-      "technologies": ["Flask", "LightGBM", "GeoPandas", "Rasterio", "Leaflet", "Google Gemini API"],
+      "technologies": [
+        "Flask",
+        "LightGBM",
+        "GeoPandas",
+        "Rasterio",
+        "Leaflet",
+        "Google Gemini API"
+      ],
       "period": "Jan 2026",
-      "github": "https://github.com/Dhruthi-D/Urban-Sustainability-AI",
+      "github": "https://github.com/Dhruthi-D/Urban_Sustainability_AI",
       "demo": "",
       "features": [
         "Geospatial raster data and OpenStreetMap vector integration for location-based sustainability scores with Leaflet map visualization",
@@ -85,9 +136,15 @@
     {
       "title": "Web-Based Club Management System",
       "description": "Built a web-based club management system using MySQL + MongoDB, supporting role-based access, secure authentication, and concurrent users.",
-      "technologies": ["Node.js", "Express.js", "MySQL", "MongoDB", "NLP"],
+      "technologies": [
+        "Node.js",
+        "Express.js",
+        "MySQL",
+        "MongoDB",
+        "NLP"
+      ],
       "period": "Jan 2026",
-      "github": "https://github.com/Dhruthi-D/Club-Management-System",
+      "github": "https://github.com/ganashree-pm26/Web-based-Club-Management-System",
       "demo": "",
       "features": [
         "Supports role-based access control, secure authentication, and concurrent user management",

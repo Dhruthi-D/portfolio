@@ -20,11 +20,10 @@ export default function Projects() {
         {resumeData.projects.map((project, index) => (
           <div
             key={index}
-            className={`pb-12 ${
-              index < resumeData.projects.length - 1
+            className={`pb-12 ${index < resumeData.projects.length - 1
                 ? 'border-b-4 border-double border-black/30 dark:border-white/20'
                 : ''
-            }`}
+              }`}
           >
             {/* Headline */}
             <div className="space-y-2 mb-4">
@@ -91,6 +90,16 @@ export default function Projects() {
                       className="btn-secondary w-full text-center block"
                     >
                       [ SOURCE REPOSITORY ]
+                    </a>
+                  )}
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary w-full text-center block"
+                    >
+                      [ LIVE DEMO ]
                     </a>
                   )}
                 </div>

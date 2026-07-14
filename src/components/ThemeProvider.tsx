@@ -11,12 +11,12 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove('light');
-    root.classList.add('dark');
+    root.classList.remove('dark');
+    root.classList.add('light');
   }, []);
 
   return (
-    <ThemeContext.Provider value={{ theme: 'dark' }}>
+    <ThemeContext.Provider value={{ theme: 'light' as any }}>
       {children}
     </ThemeContext.Provider>
   );
