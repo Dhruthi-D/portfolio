@@ -88,56 +88,56 @@
   }
 }
 
-/* 3D Newspaper Page Turning Animations */
-.newspaper-transition-container {
-  perspective: 2200px;
-  perspective-origin: center center;
-  position: relative;
-  width: 100%;
-  min-height: 80vh;
+/* 1. Enable native cross-page transitions */
+@view-transition {
+  navigation: auto;
 }
 
-.page-fold-out {
-  animation: pageFoldOutAnim 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards;
-  transform-origin: left center;
+/* 2. Apply a 3D perspective to the viewport container */
+::view-transition-group(root) {
+  perspective: 1500px;
+  perspective-origin: center;
+}
+
+/* 3. Style both the old and new page snapshots */
+::view-transition-old(root),
+::view-transition-new(root) {
   backface-visibility: hidden;
-  pointer-events: none;
+  transform-origin: left center; /* Flip from the left axis like a book/newspaper spine */
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
 }
 
-.page-fold-in {
-  animation: pageFoldInAnim 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
-  transform-origin: left center;
-  backface-visibility: hidden;
+/* 4. Define the outgoing page animation (turns away to the left) */
+::view-transition-old(root) {
+  animation-name: turnNewspaperOut;
 }
 
-@keyframes pageFoldOutAnim {
-  0% {
-    transform: rotateY(0deg) scale(1);
-    filter: brightness(1) contrast(1);
+/* 5. Define the incoming page animation (reveals from behind) */
+::view-transition-new(root) {
+  animation-name: turnNewspaperIn;
+}
+
+/* 6. 3D Keyframe Animations */
+@keyframes turnNewspaperOut {
+  from {
+    transform: rotateY(0deg);
     opacity: 1;
   }
-  30% {
-    filter: brightness(0.85) contrast(1.05);
-  }
-  100% {
-    transform: rotateY(-95deg) scale(0.97) skewY(-2deg);
-    filter: brightness(0.4) contrast(1.1);
+  to {
+    transform: rotateY(-90deg); /* Adjust to -180deg for a full flat fold */
     opacity: 0;
   }
 }
 
-@keyframes pageFoldInAnim {
-  0% {
-    transform: rotateY(95deg) scale(0.97) skewY(2deg);
-    filter: brightness(0.4) contrast(1.1);
+@keyframes turnNewspaperIn {
+  from {
+    transform: rotateY(90deg);
     opacity: 0;
   }
-  70% {
-    filter: brightness(0.85) contrast(1.05);
-  }
-  100% {
-    transform: rotateY(0deg) scale(1);
-    filter: brightness(1) contrast(1);
+  to {
+    transform: rotateY(0deg);
     opacity: 1;
   }
 }

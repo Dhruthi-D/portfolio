@@ -7,7 +7,7 @@
     "email": "dhruthi1536@gmail.com",
     "linkedin": "linkedin.com/in/dhruthi-d",
     "github": "github.com/Dhruthi-D",
-    "photo": "/profile-photo.jpg",
+    "photo": "profile.jpeg",
     "bio": "Passionate Information Science & Engineering student with a strong foundation in web development, IoT, and data science. Experienced in building full-stack applications and working with cutting-edge technologies."
   },
   "education": [
@@ -105,7 +105,7 @@
         "MongoDB"
       ],
       "period": "April 2026",
-      "github": "https://github.com/Dhruthi-D/EduMate-KCET",
+      "github": "https://github.com/mithrangowda07/frontend-kcet",
       "demo": "https://kcet-eduguide.vercel.app",
       "features": [
         "Built responsive frontend with React, TypeScript, Tailwind CSS, cutoff visualizations using Recharts, PDF choice list generation, and JWT-based authentication",
@@ -190,7 +190,7 @@
   ],
   "social": {
     "github": "https://github.com/Dhruthi-D",
-    "linkedin": "https://linkedin.com/in/dhruthi-d",
+    "linkedin": "https://www.linkedin.com/in/dhruthi-d-767235363",
     "email": "dhruthi1536@gmail.com"
   }
 }

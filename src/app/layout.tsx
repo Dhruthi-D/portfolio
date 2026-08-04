@@ -4,7 +4,6 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
-import NewspaperTransition from "@/components/NewspaperTransition";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -28,24 +27,28 @@ export const metadata: Metadata = {
   },
 };
 
+import { ViewTransitions } from 'next-view-transitions';
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${lora.variable}`} suppressHydrationWarning>
-      <body className="font-serif antialiased">
-        <ThemeProvider>
-          <div className="min-h-screen bg-[#f4f0ea] dark:bg-[#181614] text-[#1c1917] dark:text-[#eae6df] transition-colors duration-300">
-            <Navigation />
-            <main className="pt-20 pb-16">
-              <NewspaperTransition>{children}</NewspaperTransition>
-            </main>
-            <Footer />
-          </div>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en" className={`${playfair.variable} ${lora.variable}`} suppressHydrationWarning>
+        <body className="font-serif antialiased">
+          <ThemeProvider>
+            <div className="min-h-screen bg-[#f4f0ea] dark:bg-[#181614] text-[#1c1917] dark:text-[#eae6df] transition-colors duration-300">
+              <Navigation />
+              <main className="pt-20 pb-16">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

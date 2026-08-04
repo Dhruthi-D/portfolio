@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
 import { Heart } from 'lucide-react';
 import resumeData from '../../resume_data.json';
 

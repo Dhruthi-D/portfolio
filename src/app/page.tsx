@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import { Link } from 'next-view-transitions';
+import Image from 'next/image';
 import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
 import resumeData from '../../resume_data.json';
 
@@ -64,8 +65,14 @@ export default function Home() {
               {/* Photo */}
               <div className="md:col-span-6">
                 <div className="vintage-photo">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-black/5 to-black/10 dark:from-white/5 dark:to-white/10 flex items-center justify-center border border-black/20">
-                    <span className="font-headline font-extrabold text-7xl text-black/20 dark:text-white/10 select-none">DD</span>
+                  <div className="aspect-[4/3] relative bg-gradient-to-br from-black/5 to-black/10 dark:from-white/5 dark:to-white/10 border border-black/20 overflow-hidden">
+                    <Image 
+                      src={`/${resumeData.personal.photo}`}
+                      alt={resumeData.personal.name}
+                      fill
+                      className="object-cover"
+                      priority
+                    />
                   </div>
                   <p className="text-[10px] italic text-center mt-2 text-[#1c1917]/70 dark:text-[#eae6df]/70 uppercase tracking-wider font-semibold">
                     Fig 1. Dhruthi D. - Student Portfolio portrait (typeset in digital print).
