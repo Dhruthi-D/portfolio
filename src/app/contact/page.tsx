@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import resumeData from '../../../resume_data.json';
 
 export default function Contact() {
@@ -59,7 +59,7 @@ export default function Contact() {
             MESSAGE DELIVERED SUCCESSFULLY
           </h1>
           <p className="text-sm font-serif italic text-[#1c1917]/85 dark:text-[#eae6df]/85 mb-8">
-            "Your letter has been submitted to the correspondence ledger. I will review and reply within 24 hours."
+            &quot;Your letter has been submitted to the correspondence ledger. I will review and reply within 24 hours.&quot;
           </p>
           <button
             onClick={() => setIsSubmitted(false)}
@@ -81,7 +81,7 @@ export default function Contact() {
           WRITE TO THE EDITOR
         </h1>
         <p className="text-sm md:text-base font-serif italic text-[#1c1917]/70 dark:text-[#eae6df]/70 max-w-2xl mx-auto mt-4 leading-relaxed">
-          "Submit inquiries, questions, or invitations for collaboration directly to the digital correspondence desk."
+          &quot;Submit inquiries, questions, or invitations for collaboration directly to the digital correspondence desk.&quot;
         </p>
       </div>
 

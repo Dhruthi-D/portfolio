@@ -1,11 +1,11 @@
 # DHRUTHI D - Portfolio Website
 
-A modern, responsive frontend portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features a clean design, dark mode support, and a functional contact form.
+A unique, editorial/newspaper-themed frontend portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features a vintage typographic design, dark mode support, and a functional contact form.
 
 ## ✨ Features
 
 - **Frontend First**: A modern frontend portfolio built with React and Next.js for fast client-side experience
-- **Modern Design**: Clean and professional design with smooth animations
+- **Editorial Design**: Unique vintage newspaper aesthetic with modern, smooth 3D page transitions
 - **Responsive**: Fully responsive design that works on all devices
 - **Dark Mode**: Toggle between light and dark themes
 - **Fast Performance**: Built with Next.js for optimal performance
@@ -186,7 +186,7 @@ The website includes a dark mode toggle that:
 - **Framework**: Next.js 15
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **Icons**: Lucide React
+- **Icons**: Lucide React & React Icons
 - **Email**: Nodemailer
 - **Deployment**: Vercel (recommended)
 
@@ -211,8 +211,8 @@ For support or questions:
 ## 🙏 Acknowledgments
 
 - Built with Next.js and Tailwind CSS
-- Icons from Lucide React
-- Design inspiration from modern portfolio websites
+- Icons from Lucide React & React Icons
+- Design inspiration from vintage editorial and newspaper layouts
 
 ---
 

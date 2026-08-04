@@ -1,6 +1,7 @@
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
-import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Download, Mail } from 'lucide-react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import resumeData from '../../resume_data.json';
 
 export default function Home() {
@@ -57,7 +58,7 @@ export default function Home() {
               PIONEERING SYSTEM INTEGRATION & FULL-STACK SYSTEMS
             </h2>
             <p className="text-lg md:text-xl font-medium font-serif italic text-[#1c1917]/80 dark:text-[#eae6df]/80 leading-relaxed mb-6">
-              "Building software and data-driven systems that bridge hardware control with personalized web recommendation algorithms."
+              &quot;Building software and data-driven systems that bridge hardware control with personalized web recommendation algorithms.&quot;
             </p>
 
             {/* Main Picture Block */}
@@ -206,7 +207,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 hover:underline"
               >
-                <Github className="w-4 h-4" />
+                <FaGithub className="w-4 h-4" />
                 <span>GITHUB: /DHRUTHI-D</span>
               </a>
               <a
@@ -215,7 +216,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 hover:underline"
               >
-                <Linkedin className="w-4 h-4" />
+                <FaLinkedin className="w-4 h-4" />
                 <span>LINKEDIN: /IN/DHRUTHI-D</span>
               </a>
               <a

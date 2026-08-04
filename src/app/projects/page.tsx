@@ -1,4 +1,4 @@
-import { Github, Calendar, Code } from 'lucide-react';
+import { Calendar, Code } from 'lucide-react';
 import resumeData from '../../../resume_data.json';
 
 export default function Projects() {
@@ -11,7 +11,7 @@ export default function Projects() {
           ENGINEERING & SYSTEMS REPORT
         </h1>
         <p className="text-sm md:text-base font-serif italic text-[#1c1917]/70 dark:text-[#eae6df]/70 max-w-2xl mx-auto mt-4 leading-relaxed">
-          "Detailed dispatches from projects on web development, geospatial data analysis, and advanced database engineering."
+          &quot;Detailed dispatches from projects on web development, geospatial data analysis, and advanced database engineering.&quot;
         </p>
       </div>
 
