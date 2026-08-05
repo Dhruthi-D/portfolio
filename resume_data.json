@@ -39,10 +39,6 @@
   "skills": {
     "languages": [
       {
-        "name": "Python",
-        "level": 90
-      },
-      {
         "name": "C",
         "level": 85
       },
@@ -65,7 +61,7 @@
     ],
     "backend": [
       {
-        "name": "Django",
+        "name": "React.js",
         "level": 85
       },
       {
