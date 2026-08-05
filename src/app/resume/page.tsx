@@ -125,7 +125,6 @@ export default function Resume() {
             <div className="space-y-2 text-xs font-serif text-[#1c1917]/85 dark:text-[#eae6df]/85 uppercase">
               <p className="font-bold">DHRUTHI D.</p>
               <p>{resumeData.personal.location}</p>
-              <p>PH: {resumeData.personal.phone}</p>
               <p className="lowercase font-bold select-all">{resumeData.personal.email}</p>
             </div>
           </div>
@@ -135,7 +134,7 @@ export default function Resume() {
             <h3 className="font-headline font-black text-sm uppercase tracking-wider text-black dark:text-white border-b border-black dark:border-white/20 pb-1">
               III. Technical Catalog
             </h3>
-            
+
             {/* Languages */}
             <div className="space-y-1.5">
               <h4 className="font-headline font-bold text-xs uppercase tracking-wider text-black dark:text-white">Languages</h4>
