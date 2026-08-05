@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     description: "Information Science & Engineering Student | Web Developer | IoT Enthusiast",
     type: "website",
   },
+  verification: {
+    google: "btjWGunFejiJopmx9TmAxjfq7D8y-Vpy69kqdRyIOuc",
+  },
 };
 
 import { ViewTransitions } from 'next-view-transitions';
